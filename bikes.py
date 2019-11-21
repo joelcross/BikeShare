@@ -1,22 +1,8 @@
-"""
-This is the implementation for the BikeShare project.
-The user can interact with the UI to do various things with
-the BikeShare system.
-
-CISC121
-Nov. 30, 2018
-
-Joel Cross
-20071213
-"""
-
-# loads a library
 import urllib.request
-
 
 """
 This function reads the BikeShare data from the text file.
-It sorts it into separate lists, then combines these lists into one big one.
+It sorts it into separate lists, then combines these lists into another.
 """
 def readHtml():
     response = urllib.request.urlopen("http://research.cs.queensu.ca/home/cords2/bikes.txt")
@@ -30,7 +16,7 @@ def readHtml():
     bikesAvailable=[]
     docksAvailable=[]
     
-    # goes through each line in the text file
+    # iterate through each line in the text file
     check=True
     while check==True: # goes through line by line
         html = response.readline()  #reads current line
